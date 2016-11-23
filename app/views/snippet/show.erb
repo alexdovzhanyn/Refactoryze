@@ -1,17 +1,21 @@
 <div class="col-md-6 col-md-offset-3">
-	<div class="col-md-12 jumbotron">
+	<div class="col-md-12">
 		<h1><%= @snippet.title %></h1>
-		<button><%= @snippet.language %></button>
+		<div class="language"><%= @snippet.language %></div>
 		<p><%= @snippet.description %></p>
 		<pre><%= @snippet.code %></pre>
 	</div>
-	<div class="col-md-12 jumbotron">
+	<div class="col-md-12">
+		<h3>Your Refactor</h3>
 		<%= render 'refactor/create' %>
 	</div>
-	<div class="col-md-12 jumbotron">
+	<div class="col-md-12">
+		<h3>Refactors</h3>
 		<% @snippet.refactors.each do |refactor| %>
-			<p><%= refactor.user.email %></p>
-			<pre><%= refactor.code %></pre>
+			<div class="refactor-container">
+				<p><%= refactor.user.username %></p>
+				<pre><%= refactor.code %></pre>
+			</div>
 		<% end %>
 	</div>
 </div>

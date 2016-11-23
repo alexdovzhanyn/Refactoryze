@@ -1,8 +1,9 @@
 <div class="col-md-6 col-md-offset-3">
-	<% @snippets.each do |snippet| %>
+	<% @snippets.reverse_each do |snippet| %>
 		<div class="col-md-12 jumbotron">
 			<p><%= snippet.title %></p>
-			<button><%= snippet.language %></button>
+			<div class="language"><%= snippet.language %></div>
+			<a href="/snippets/<%= snippet.id %>" >View</a>
 		</div>
 	<% end %>
 </div>

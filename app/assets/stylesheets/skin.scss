@@ -2,9 +2,49 @@ body {
 	background: #303133;
 	color: #fff;
 
+	.navbar-default .navbar-nav>.open>a, 
+	.navbar-default .navbar-nav>.open>a:focus, 
+	.navbar-default .navbar-nav>.open>a:hover {
+		background: #333;
+		color: rgba(255,255,255, 0.8);
+	}
+
+	.navbar-default .navbar-nav>li>a:focus,
+	.navbar-default .navbar-nav>li>a:hover {
+		color: rgba(255,255,255, 0.6);
+	}
+
+	.dropdown-menu>li>a:hover {
+		background: #333;
+		color: rgba(255,255,255, 0.8);
+	}
+
+	.navbar-default {
+		border-radius: 0px;
+		background: #222222;
+		color: #fff;
+		border: 0px;
+
+		.navbar-nav {
+			li {
+				a {
+					color: rgba(255,255,255, 0.8);
+				}
+
+				.dropdown-menu {
+					background: #222;
+				}
+			}
+		}
+	}
+
 	pre {
 		background: #3c3c3c;
 		color: #fff;
+	}
+
+	textarea, input {
+		background: #3c3c3c;
 	}
 
 	.jumbotron {

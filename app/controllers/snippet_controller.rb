@@ -10,6 +10,8 @@ class SnippetController < ApplicationController
 	end
 
 	def post_snippet
-		current_user.snippets.create(title: params[:title], description: params[:description], language: params[:language], code: params[:code])
+		snippet = current_user.snippets.create(title: params[:title], description: params[:description], language: params[:language], code: params[:code])
+
+		redirect_to "/snippets/#{snippet.id}"
 	end
 end
