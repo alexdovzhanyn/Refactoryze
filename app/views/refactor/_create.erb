@@ -1,0 +1,6 @@
+<form action="/refactor/create" method="POST">
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<input type="hidden" name="snippet" value=<%= @snippet.id %> />
+	<textarea name="code" placeholder="Refactor..." required /></textarea>
+	<input type="submit" value="Submit Refactor" />
+</form>

@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+	get '/' => 'application#index'
+
+	get '/profile' => 'user#show'
+
+	get '/snippets/create' => 'snippet#create'
+	get '/snippets/:id' => 'snippet#show'
+
+	post '/post_snippet' => 'snippet#post_snippet'
+
+	post '/refactor/create' => 'refactor#create'
+
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  
+  devise_scope :user do
+	  get "/login" => "devise/sessions#new"
+	end
 end

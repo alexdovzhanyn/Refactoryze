@@ -1,0 +1,8 @@
+<form action="/post_snippet" method="POST">
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<input type="text" name="title" placeholder="Title" required />
+	<input type="text" name="language" placeholder="Snippet Language" required />
+	<textarea name="description" placeholder="Description" required></textarea>
+	<textarea name="code" placeholder="Code Snippet" required></textarea>
+	<input type="submit" value="Post Snippet" />
+</form>

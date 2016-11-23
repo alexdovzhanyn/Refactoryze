@@ -1,0 +1,17 @@
+<%= current_user.email %>
+
+<h1>Snippets</h1>
+<ul>
+	<% current_user.snippets.each do |snippet| %>
+		<li>
+			<a href="/snippets/<%= snippet.id %>" ><%= snippet.title %></a>
+		</li>
+	<% end %>
+</ul>
+
+<h1>Refactors</h1>
+<% current_user.refactors.each do |refactor| %>
+	<li>
+		<pre><%= refactor.code %></pre>
+	</li>
+<% end %>
