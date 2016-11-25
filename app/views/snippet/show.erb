@@ -2,6 +2,7 @@
 	<div class="col-md-12">
 		<h1><%= @snippet.title %></h1>
 		<div class="language"><%= @snippet.language %></div>
+		<p><%= @snippet.user.username %></p>
 		<p><%= @snippet.description %></p>
 		<pre><%= @snippet.code %></pre>
 	</div>
@@ -15,6 +16,15 @@
 			<div class="refactor-container">
 				<p><%= refactor.user.username %></p>
 				<pre><%= refactor.code %></pre>
+				<div class="col-md-12">
+					<div class="row">
+						<form action="/refactors/<%= refactor.id %>/upvote" method="POST">
+							<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+							<input type="submit" value="+" class="upvote <%= refactor.liked_by.include?(current_user.id) ? 'upvoted' : '' %>"/>
+						</form>
+						<p><%= refactor.liked_by.count %> upvotes</p>
+					</div>
+				</div>
 			</div>
 		<% end %>
 	</div>

@@ -6,7 +6,7 @@
 <ul>
 	<% current_user.snippets.each do |snippet| %>
 		<li>
-			<a href="/snippets/<%= snippet.id %>" ><%= snippet.title %></a>
+			<a href="/snippets/<%= snippet.id %>/<%= snippet.slug %>" ><%= snippet.title %></a>
 		</li>
 	<% end %>
 </ul>

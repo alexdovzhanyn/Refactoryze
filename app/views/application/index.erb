@@ -1,9 +1,9 @@
 <div class="col-md-6 col-md-offset-3">
 	<% @snippets.reverse_each do |snippet| %>
-		<div class="col-md-12 jumbotron">
-			<p><%= snippet.title %></p>
+		<div class="col-md-12 snippet-preview">
+			<a href="/snippets/<%= snippet.id %>/<%= snippet.slug %>"><%= snippet.title %></a>
 			<div class="language"><%= snippet.language %></div>
-			<a href="/snippets/<%= snippet.id %>" >View</a>
+			<p><%= snippet.refactors.count %> refactors</p>
 		</div>
 	<% end %>
 </div>
