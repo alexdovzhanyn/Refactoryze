@@ -1,9 +1,31 @@
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-6 col-md-offset-1">
 	<% @snippets.reverse_each do |snippet| %>
 		<div class="col-md-12 snippet-preview">
-			<a href="/snippets/<%= snippet.id %>/<%= snippet.slug %>"><%= snippet.title %></a>
-			<div class="language"><%= snippet.language %></div>
-			<p><%= snippet.refactors.count %> refactors</p>
+			<div class="row">
+				<div class="col-xs-3 col-md-2 text-center">
+					<p><%= snippet.refactors.count %></p>
+					<p>refactors</p>
+				</div>
+				<div class="col-xs-9 col-md-10">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="row">
+								<a href="/snippets/<%= snippet.id %>/<%= snippet.slug %>"><%= snippet.title %></a>
+							</div>
+						</div>
+						<div class="col-xs-6 text-right">
+							<p class="timestamp">posted <%= time_ago_in_words(snippet.created_at) %> ago by <a href="/users/<%= snippet.user.id %>/<%= snippet.user.username %>"><%= snippet.user.username %></a></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-9">
+							<div class="row">
+								<div class="language"><%= snippet.language %></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	<% end %>
 </div>

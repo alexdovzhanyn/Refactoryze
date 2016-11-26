@@ -1,10 +1,10 @@
-<%= current_user.first_name %> <%= current_user.last_name %> - <%= current_user.username %>
+<%= @user.first_name %> <%= @user.last_name %> - <%= @user.username %>
 </br>
-<%= current_user.email %>
+<%= @user.email %>
 
 <h1>Snippets</h1>
 <ul>
-	<% current_user.snippets.reverse_each do |snippet| %>
+	<% @user.snippets.reverse_each do |snippet| %>
 		<li>
 			<a href="/snippets/<%= snippet.id %>/<%= snippet.slug %>" ><%= snippet.title %></a>
 		</li>
@@ -12,7 +12,7 @@
 </ul>
 
 <h1>Refactors</h1>
-<% current_user.refactors.each do |refactor| %>
+<% @user.refactors.each do |refactor| %>
 	<li>
 		<pre><%= refactor.code %></pre>
 	</li>

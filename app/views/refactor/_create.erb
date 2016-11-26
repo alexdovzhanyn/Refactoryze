@@ -1,6 +1,8 @@
-<form action="/refactor/create" method="POST">
+<form action="/refactor/create" method="POST" class="col-md-12">
 	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 	<input type="hidden" name="snippet" value=<%= @snippet.id %> />
-	<textarea name="code" placeholder="Refactor..." required /></textarea>
-	<input type="submit" value="Submit Refactor" />
+	<div class="row">
+		<textarea name="code" placeholder="Refactor..." required class="col-md-12"/></textarea>
+		<input type="submit" value="Submit Refactor" class="col-md-3 col-md-push-9"/>
+	</div>
 </form>
