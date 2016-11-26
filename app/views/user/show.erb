@@ -1,19 +1,26 @@
-<%= @user.first_name %> <%= @user.last_name %> - <%= @user.username %>
-</br>
-<%= @user.email %>
-
-<h1>Snippets</h1>
-<ul>
-	<% @user.snippets.reverse_each do |snippet| %>
-		<li>
-			<a href="/snippets/<%= snippet.id %>/<%= snippet.slug %>" ><%= snippet.title %></a>
-		</li>
-	<% end %>
-</ul>
-
-<h1>Refactors</h1>
-<% @user.refactors.each do |refactor| %>
-	<li>
-		<pre><%= refactor.code %></pre>
-	</li>
-<% end %>
+<div class="col-md-10 col-md-offset-1">
+	<div class="col-md-4">
+		<h3 class="underlined"><%= @user.first_name %> <%= @user.last_name %></h3>
+		<%= @user.username %>
+		</br>
+		<%= @user.email %>
+	</div>
+	<div class="col-md-4">
+		<h3 class="underlined">Snippets</h3>
+		<ul>
+			<% @user.snippets.reverse_each do |snippet| %>
+				<li>
+					<a href="/snippets/<%= snippet.id %>/<%= snippet.slug %>" ><%= snippet.title %></a>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h3 class="underlined">Refactors</h3>
+		<% @user.refactors.each do |refactor| %>
+			<li>
+				<pre><%= refactor.code %></pre>
+			</li>
+		<% end %>
+	</div>
+</div>

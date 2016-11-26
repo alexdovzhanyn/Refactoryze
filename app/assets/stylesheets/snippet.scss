@@ -2,9 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.language {
-	background: #303133;
-	display: inline-block;
-	padding: 5px 10px;
-	font-size: 12px;
+.snippet-preview {
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	background: #262729;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	.language {
+		background: #303133;
+		display: inline-block;
+		padding: 5px 10px;
+		font-size: 12px;
+	}
+}
+
+.snippet-form {
+	input, textarea {
+		margin-bottom: 15px;
+		border: 1px solid rgba(255,255,255,0.2);
+	}
+
+	input[type="submit"] {
+		background: #337ab7;
+		border-color: #337ab7;
+	}
+
+	textarea {
+		min-height: 100px;
+	}
 }
