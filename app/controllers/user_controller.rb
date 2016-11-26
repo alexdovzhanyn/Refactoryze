@@ -16,6 +16,7 @@ class UserController < ApplicationController
 	end
 
 	def profile
-		render 'profile'
+		@user = current_user
+		render 'show'
 	end
 end

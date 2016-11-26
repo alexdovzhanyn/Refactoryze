@@ -8,21 +8,23 @@
 		</div>
 		<div class="col-md-4">
 			<h3 class="underlined">Snippets</h3>
-			<ul>
+			<div class="row">
 				<% @user.snippets.reverse_each do |snippet| %>
-					<li>
+					<div class="col-md-12">
 						<a href="/snippets/<%= snippet.id %>/<%= snippet.slug %>" ><%= snippet.title %></a>
-					</li>
+					</div>
 				<% end %>
-			</ul>
+			</div>
 		</div>
 		<div class="col-md-4">
 			<h3 class="underlined">Refactors</h3>
-			<% @user.refactors.each do |refactor| %>
-				<li>
-					<pre><%= refactor.code %></pre>
-				</li>
-			<% end %>
+			<div class="row">
+				<% @user.refactors.each do |refactor| %>
+					<div class="col-md-12">
+						<pre><%= refactor.code %></pre>
+					</div>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>
