@@ -4,7 +4,7 @@
 		<div class="language"><%= @snippet.language %></div>
 		<a href="/users/<%= @snippet.user.id %>/<%= @snippet.user.username %>"><%= @snippet.user.username %></a>
 		<p><%= @snippet.description %></p>
-		<pre><%= @snippet.code %></pre>
+		<pre class="snippet-code"><%= @snippet.code %></pre>
 	</div>
 	<div class="col-md-12">
 		<h3 class="underlined">Your Refactor</h3>

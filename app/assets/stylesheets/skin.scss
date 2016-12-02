@@ -118,4 +118,20 @@ body {
 			font-size: 14px;
 		}
 	}
+
+	.site-main {
+		min-height: 90vh;
+	}
+
+	.footer-container {
+		background: #222222;
+		margin-top: 30px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		p {
+			color: #fff;
+			font-size: 12px;
+		}
+	}
 }

@@ -47,7 +47,7 @@
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-  	<div class="container-fluid">
+  	<div class="container-fluid site-main">
   		<div class="col-md-10 col-md-offset-1 text-right navigation-button-container">
   			<a href="/snippets/new" class="navigation-button">Post A Snippet</a>
   			<a href="/users" class="navigation-button">Users</a>
@@ -55,5 +55,10 @@
   		</div>
     	<%= yield %>
     </div>
+   	<div class="container-fluid">
+   		<div class="row footer-container text-center">
+   			<p>&copy; <%= Time.now.year %> Refactoryze</p>
+   		</div>
+   	</div>
   </body>
 </html>
