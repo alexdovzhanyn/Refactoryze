@@ -19,4 +19,21 @@ class UserController < ApplicationController
 		@user = current_user
 		render 'show'
 	end
+
+	def edit_profile
+		render 'edit'
+	end
+
+	def post_edit_profile
+		u = User.find(current_user.id)
+
+		u.update(
+			first_name: params[:first_name],
+			last_name: params[:last_name],
+			email: params[:email],
+			bio: params[:bio]
+		)
+
+		redirect_to '/profile'
+	end
 end

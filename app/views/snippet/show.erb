@@ -2,7 +2,7 @@
 	<div class="col-md-12">
 		<h3 class="underlined"><%= @snippet.title %></h3>
 		<div class="language"><%= @snippet.language %></div>
-		<p><%= @snippet.user.username %></p>
+		<a href="/users/<%= @snippet.user.id %>/<%= @snippet.user.username %>"><%= @snippet.user.username %></a>
 		<p><%= @snippet.description %></p>
 		<pre><%= @snippet.code %></pre>
 	</div>
@@ -15,7 +15,7 @@
 		<% if @snippet.refactors.present? %>
 			<% @snippet.refactors.each do |refactor| %>
 				<div class="refactor-container">
-					<p><%= refactor.user.username %></p>
+					<a href="/users/<%= refactor.user.id %>/<%= refactor.user.username %>"><%= refactor.user.username %></a>
 					<pre><%= refactor.code %></pre>
 					<div class="col-md-12">
 						<div class="row">

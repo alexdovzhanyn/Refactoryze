@@ -1,6 +1,23 @@
 body {
-	background: #303133;
-	color: #fff;
+	background: #fff;
+	color: #000;
+
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.navbar {
+		min-height: auto;
+
+		.navbar-brand {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-size: 16px;
+			height: auto;
+			color: rgba(255,255,255, 0.8);
+		}
+	}
 
 	.navbar-default .navbar-nav>.open>a, 
 	.navbar-default .navbar-nav>.open>a:focus, 
@@ -39,12 +56,14 @@ body {
 	}
 
 	pre {
-		background: #3c3c3c;
-		color: #fff;
+		border: 1px solid transparent;
+		border-radius: 0px;
+		color: rgba(0,0,0,0.6);
 	}
 
 	textarea, input {
-		background: #3c3c3c;
+		border: 1px solid rgba(0,0,0,0.4);
+		background: #fff;
 	}
 
 	textarea {
@@ -56,19 +75,19 @@ body {
 	}
 
 	.timestamp {
-		color: rgba(255,255,255, 0.4);
+		color: rgba(0,0,0, 0.4);
 		font-size: 12px;
 	}
 
 	.underlined {
-		border-bottom: 1px solid rgba(255,255,255,0.1);
+		border-bottom: 1px solid rgba(0,0,0,0.1);
 	}
 
 	.navigation-button-container {
 		margin-bottom: 30px;
 		
 		.navigation-button {
-			background: rgba(255,255,255,0.1);
+			background: rgba(0,0,0,0.6);
 			padding: 5px 10px;
 			margin-left: 2px;
 			margin-right: 2px;
@@ -80,6 +99,23 @@ body {
 		.navigation-button:hover {
 			background: #337ab7;
 			text-decoration: none;
+		}
+	}
+
+	.page-title {
+		font-size: 18px;
+		padding-bottom: 10px;
+	}
+
+	form {
+
+		input, textarea {
+			color: rgba(0,0,0,0.8);
+		}
+
+		h3 {
+			margin: 5px 0px 0px 0px;
+			font-size: 14px;
 		}
 	}
 }

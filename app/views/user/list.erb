@@ -1,5 +1,8 @@
 <div class="col-md-8 col-md-offset-1">
 	<% @users.each do |user| %>
-		<a href="/users/<%= user.id %>/<%= user.username %>"><%= user.username %></a>
+		<div class="col-md-3 user-preview">
+			<p><%= user.first_name %> <%= user.last_name %></p>
+			<a href="/users/<%= user.id %>/<%= user.username %>"><%= user.username %></a>
+		</div>
 	<% end %>
 </div>

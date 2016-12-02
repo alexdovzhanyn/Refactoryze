@@ -3,31 +3,50 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .snippet-preview {
-	border-bottom: 1px solid rgba(255,255,255,0.1);
-	background: #262729;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	background: #fff;
 	padding-top: 15px;
 	padding-bottom: 15px;
 
+	.snippet-title {
+		font-size: 14px;
+	}
+
 	.language {
-		background: #303133;
+		background: rgba(51,122,190,0.6);
 		display: inline-block;
 		padding: 5px 10px;
 		font-size: 12px;
+		color: #fff;
+	}
+
+	.refactor-count {
+		color: rgba(0,0,0, 0.4);
+		font-size: 12px;
+
+		p {
+			margin-bottom: 0px;
+		}
 	}
 }
 
-.snippet-form {
+form {
 	input, textarea {
 		margin-bottom: 15px;
-		border: 1px solid rgba(255,255,255,0.2);
 	}
 
 	input[type="submit"] {
 		background: #337ab7;
 		border-color: #337ab7;
+		color: #fff;
 	}
 
 	textarea {
 		min-height: 100px;
+	}
+
+	h3 {
+		margin: 5px 0px 0px 0px;
+		font-size: 14px;
 	}
 }

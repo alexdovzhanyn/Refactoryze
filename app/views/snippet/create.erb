@@ -1,8 +1,30 @@
-<form action="/post_snippet" method="POST" class="col-md-4 col-md-offset-4 snippet-form">
-	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-	<input type="text" name="title" placeholder="Title" required class="col-md-12"/>
-	<input type="text" name="language" placeholder="Snippet Language" required class="col-md-12"/>
-	<textarea name="description" placeholder="Description" required class="col-md-12"></textarea>
-	<textarea name="code" placeholder="Code Snippet" required class="col-md-12"></textarea>
-	<input type="submit" value="Post Snippet" class="col-md-12"/>
+<form action="/post_snippet" method="POST" class="col-md-5 col-md-offset-3 snippet-form">
+	<div class="row">
+		<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+		<div class="col-md-12">
+			<div class="row">
+				<h3 class="col-md-3">Title:</h3>
+				<input type="text" name="title" placeholder="My Super Cool New Algorithm" class="col-md-9" required/>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<h3 class="col-md-3">Snippet Language:</h3>
+				<input type="text" name="language" placeholder="JavaScript" class="col-md-9" required/>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<h3 class="col-md-3">Description:</h3>
+				<textarea name="description" placeholder="The goal of this code is to..." class="col-md-9" required></textarea>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<h3 class="col-md-3">Code Snippet:</h3>
+				<textarea name="code" placeholder="alert('This is my super cool algorithm');" class="col-md-9" required></textarea>
+			</div>
+		</div>
+		<input type="submit" value="Post Snippet" class="col-md-9 col-md-push-3"/>
+	</div>
 </form>

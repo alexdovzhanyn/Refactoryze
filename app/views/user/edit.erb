@@ -1,0 +1,30 @@
+<form method="POST" action="/profile/edit" class="col-md-6 col-md-offset-3">
+	<div class="row">
+		<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+		<div class="col-md-12">
+			<div class="row">
+				<h3 class="col-md-3">First Name:</h3>
+				<input type="text" name="first_name" placeholder="John" class="col-md-9" value="<%= current_user.first_name %>"/>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<h3 class="col-md-3">Last Name:</h3>
+				<input type="text" name="last_name" placeholder="Doe" class="col-md-9" value="<%= current_user.last_name %>"/>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<h3 class="col-md-3">Email Address:</h3>
+				<input type="text" name="email" placeholder="john.doe@example.com" class="col-md-9" value="<%= current_user.email %>"/>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<h3 class="col-md-3">Bio:</h3>
+				<textarea name="bio" placeholder="Add your bio..." class="col-md-9"><%= current_user.bio %></textarea>
+			</div>
+		</div>
+		<input type="submit" value="Update" class="col-md-9 col-md-push-3"/>
+	</div>
+</form>

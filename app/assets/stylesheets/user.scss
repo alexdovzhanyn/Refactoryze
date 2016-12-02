@@ -1,3 +1,27 @@
 // Place all the styles related to the User controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile-container {
+
+	.username {
+
+	}
+
+	.email {
+
+	}
+
+	.bio {
+		color: rgba(0,0,0, 0.6);
+		font-size: 14px;
+	}
+}
+
+.user-preview {
+	border-left: 1px solid rgba(0,0,0,0.2);
+}
+
+.user-preview:nth-child(4n) {
+	border-right: 1px solid rgba(0,0,0,0.2);
+}

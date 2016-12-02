@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 	get '/' => 'application#index'
 
 	get '/profile' => 'user#profile'
+	get '/profile/edit' => 'user#edit_profile'
+	post '/profile/edit' => 'user#post_edit_profile'
 
 	get '/snippets' => 'application#index'
 	get '/snippets/new' => 'snippet#create'

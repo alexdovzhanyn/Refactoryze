@@ -1,8 +1,9 @@
 <div class="col-md-6 col-md-offset-1">
+	<h3 class="col-md-12 page-title underlined"><%= @pageTitle %></h3>
 	<% @snippets.reverse_each do |snippet| %>
 		<div class="col-md-12 snippet-preview">
 			<div class="row">
-				<div class="col-xs-3 col-md-2 text-center">
+				<div class="col-xs-3 col-md-2 text-center refactor-count">
 					<p><%= snippet.refactors.count %></p>
 					<p>refactors</p>
 				</div>
@@ -10,7 +11,7 @@
 					<div class="row">
 						<div class="col-xs-6">
 							<div class="row">
-								<a href="/snippets/<%= snippet.id %>/<%= snippet.slug %>"><%= snippet.title %></a>
+								<a href="/snippets/<%= snippet.id %>/<%= snippet.slug %>" class="snippet-title"><%= snippet.title %></a>
 							</div>
 						</div>
 						<div class="col-xs-6 text-right">

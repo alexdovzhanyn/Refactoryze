@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def index
+  	@pageTitle = "Recent Snippets"
   	@snippets = Snippet.all
   	render 'index'
   end
