@@ -1,5 +1,5 @@
 class SnippetController < ApplicationController
-	before_action :authenticate_user!, :only => :create
+	before_action :authenticate_user!, :only => [:create, :destroy, :confirm_destroy]
 
 	def show
 		@snippet = Snippet.find(params[:id])
@@ -7,6 +7,24 @@ class SnippetController < ApplicationController
 
 	def create
 		render 'create'
+	end
+
+	def confirm_destroy
+		@snippet = Snippet.find(params[:id])
+		
+		if current_user.id == @snippet.user_id
+			render 'destroy'
+		else
+			redirect_to "/snippets/#{@snippet.id}/#{snippet.slug}"
+		end
+	end
+
+	def destroy
+		@snippet = Snippet.find(params[:id])
+
+		@snippet.delete
+
+		redirect_to "/"
 	end
 
 	def post_snippet

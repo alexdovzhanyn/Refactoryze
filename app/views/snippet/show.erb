@@ -5,6 +5,9 @@
 		<a href="/users/<%= @snippet.user.id %>/<%= @snippet.user.username %>"><%= @snippet.user.username %></a>
 		<p><%= @snippet.description %></p>
 		<pre class="snippet-code"><%= @snippet.code %></pre>
+		<% if @snippet.user_id == current_user.id %>
+			<a href="/snippets/<%= @snippet.id %>/delete">Delete Snippet</a>
+		<% end %>
 	</div>
 	<div class="col-md-12">
 		<h3 class="underlined">Your Refactor</h3>
@@ -24,6 +27,9 @@
 								<input type="submit" value="+" class="upvote <%= refactor.liked_by.include?(current_user.id) ? 'upvoted' : '' %>"/>
 							</form>
 							<p><%= refactor.liked_by.count %> upvotes</p>
+							<% if refactor.user_id == current_user.id %>
+								<a href="/refactors/<%= refactor.id %>/delete">Delete Refactor</a>
+							<% end %>
 						</div>
 					</div>
 				</div>
