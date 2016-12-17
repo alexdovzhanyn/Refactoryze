@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-	before_action :authenticate_user!, only: :profile
+	before_action :authenticate_user!, only: [:profile, :edit_profile]
 
 	def show
 		@user = User.find(params[:id])
@@ -30,6 +30,7 @@ class UserController < ApplicationController
 		u.update(
 			first_name: params[:first_name],
 			last_name: params[:last_name],
+			website: params[:website],
 			email: params[:email],
 			bio: params[:bio]
 		)

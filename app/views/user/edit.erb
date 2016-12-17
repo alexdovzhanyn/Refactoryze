@@ -21,6 +21,12 @@
 		</div>
 		<div class="col-md-12">
 			<div class="row">
+				<h3 class="col-md-3">Website:</h3>
+				<input type="text" name="website" placeholder="http://www.example.com" class="col-md-9" value="<%= current_user.website %>"/>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
 				<h3 class="col-md-3">Bio:</h3>
 				<textarea name="bio" placeholder="Add your bio..." class="col-md-9"><%= current_user.bio %></textarea>
 			</div>

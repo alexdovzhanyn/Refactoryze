@@ -2,8 +2,16 @@
 	<div class="col-md-10 col-md-offset-1">
 		<div class="col-md-4 profile-container">
 			<h3 class="underlined"><%= @user.first_name %> <%= @user.last_name %></h3>
-			<p><span class="username"><%= @user.username %></span> <span class="email">(<%= @user.email %></span>)</p>
-			<p class="bio"><%= @user.bio || "No bio present" %></p>
+			<div class="row">
+				<img src="<%= @user.profile_picture %>" class="col-md-4" />
+				<div class="col-md-8">
+					<p><span class="username"><%= @user.username %></span> <span class="email">(<%= @user.email %></span>)</p>
+					<% if @user.website %>
+						<a href="<%= @user.website %>"><%= @user.website %></a>
+					<% end %>
+					<p class="bio"><%= @user.bio || "No bio present" %></p>
+				</div>
+			</div>
 			<% if @user.id == current_user.id %>
 				<a href="/profile/edit">Edit Your Profile</a>
 			<% end %>
