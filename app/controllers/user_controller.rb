@@ -31,6 +31,7 @@ class UserController < ApplicationController
 			first_name: params[:first_name],
 			last_name: params[:last_name],
 			website: params[:website],
+			profile_picture: params[:profile_picture],
 			email: params[:email],
 			bio: params[:bio]
 		)
