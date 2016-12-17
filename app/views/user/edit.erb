@@ -3,6 +3,12 @@
 		<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 		<div class="col-md-12">
 			<div class="row">
+				<h3 class="col-md-3">Profile Picture:</h3>
+				<input type="text" name="profile_picture" placeholder="http://somewebsite.com/someimage.jpg" class="col-md-9" value="<%= current_user.profile_picture %>"/>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
 				<h3 class="col-md-3">First Name:</h3>
 				<input type="text" name="first_name" placeholder="John" class="col-md-9" value="<%= current_user.first_name %>"/>
 			</div>
@@ -17,6 +23,12 @@
 			<div class="row">
 				<h3 class="col-md-3">Email Address:</h3>
 				<input type="text" name="email" placeholder="john.doe@example.com" class="col-md-9" value="<%= current_user.email %>"/>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<h3 class="col-md-3">Website:</h3>
+				<input type="text" name="website" placeholder="http://www.example.com" class="col-md-9" value="<%= current_user.website %>"/>
 			</div>
 		</div>
 		<div class="col-md-12">
